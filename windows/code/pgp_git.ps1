@@ -1,0 +1,1 @@
+git config --global gpg.program (Get-Command gpg.exe).Path
