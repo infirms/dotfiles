@@ -1,1 +1,1 @@
-Configuration files that I constantly lose or use frequently
+Configuration files that I constantly lose or use
