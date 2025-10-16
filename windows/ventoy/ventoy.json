@@ -1,0 +1,13 @@
+{
+    "control":[
+        { "VTOY_DEFAULT_MENU_MODE": "1" }
+    ],
+    "auto_install":[
+        {
+            "image": "/windows/en-us_windows_11_iot_enterprise_ltsc_2024_x64_dvd_f6b14814.iso",
+            "template":[
+                "/ventoy/autounattend/template_windows_11_iot_enterprise_ltsc_2024.xml"
+            ]
+        }
+    ]
+}
