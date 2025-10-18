@@ -1,1 +1,2 @@
-git config --global gpg.program (Get-Command gpg.exe).Path
+$gpgpath = (Get-Command gpg.exe).path -replace '\\','/'
+git config --global gpg.program $gpgpath
