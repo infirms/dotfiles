@@ -20,4 +20,4 @@ scoop install extras/teamspeak3
 scoop install extras/vscodium
 scoop install extras/telegram
 scoop install extras/krita
-scoop install extras/sharex
+#scoop install extras/sharex
