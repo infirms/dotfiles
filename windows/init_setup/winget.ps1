@@ -9,7 +9,6 @@ winget install --id=Microsoft.WindowsTerminal -e --accept-source-agreements
 # this trick will only work if you have region that allows it to be uninstalled(Germany in my case)
 # and windows might be updated to the last version, because base windows installation doesn't have this EU regulation
 Stop-Process -Name "msedge" -Force
-winget upgrade Microsoft.Edge
 winget upgrade Microsoft.EdgeWebView2Runtime
 Stop-Process -Name "msedge" -Force
 winget uninstall Microsoft.Edge
