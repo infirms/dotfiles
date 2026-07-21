@@ -4,6 +4,7 @@ scoop bucket add extras
 scoop bucket add versions
 scoop update
 
+scoop install main/aria2
 scoop install main/winget
 scoop install main/cmake
 scoop install main/ninja
