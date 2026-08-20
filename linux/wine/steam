@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+export WINEDEBUG=-all
+export WINEPREFIX="$HOME/dev/wine_prefix"
+exec /opt/wine-cachyos/bin/wine \
+  'C:\Program Files (x86)\Steam\Steam.exe' -cef-disable-gpu-compositing

@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+
+#https://wiki.cachyos.org/configuration/gaming/
+export WINEPREFIX="$HOME/dev/wine_prefix"
+export WINEUSERSANDBOX=1
+
+# note: inf: any wine versions is supported
+WINE_ROOT="/opt/wine-cachyos"
+WINE="$WINE_ROOT/bin/wine"
+
+case "${1:-}" in
+    init)
+        exec "$WINE_ROOT/bin/wineboot" --init
+        ;;
+    cfg)
+        exec "$WINE_ROOT/bin/winecfg"
+        ;;
+    kill)
+        exec "$WINE_ROOT/bin/wineserver" -k
+        ;;
+    reg)
+        shift
+        exec "$WINE" reg "$@"
+        ;;
+    game)
+        shift
+        exec gamescope -f -- "$WINE" "$@"
+        ;;
+    status)
+        "$WINE" --version
+        echo "prefix: $WINEPREFIX"
+        [[ -e /dev/ntsync ]] && echo "ntsync: yes" || echo "ntsync: no"
+        ;;
+    *)
+        exec "$WINE" "$@"
+        ;;
+esac
