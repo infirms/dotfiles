@@ -1,0 +1,14 @@
+sudo tee /etc/systemd/system/inf-sched-performance.service >/dev/null <<'EOF'
+[Unit]
+After=armbian-hardware-optimize.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -ec 'for p in /sys/devices/system/cpu/cpufreq/policy*; do echo performance > "$p/scaling_governor"; done'
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable --now inf-sched-performance.service
