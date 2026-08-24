@@ -1,0 +1,11 @@
+{
+  "logLevel": "Error",
+  "bypassLan": true,
+  "proxies": [
+    {
+      "appNames": [""],
+      "socks5ProxyEndpoint": "10.0.1.1:2080",
+      "supportedProtocols": ["TCP", "UDP"]
+    }
+  ]
+}
