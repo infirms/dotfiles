@@ -26,3 +26,5 @@ scoop install extras/telegram
 scoop install extras/teamspeak3
 
 scoop install main/oh-my-pi
+
+scoop install infirms_scoop-bucket/eshot
