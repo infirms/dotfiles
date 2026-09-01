@@ -2,6 +2,7 @@ scoop install main/git
 scoop install main/git-lfs
 scoop bucket add extras
 scoop bucket add versions
+scoop bucket add infirms_scoop-bucket https://github.com/infirms/scoop-bucket
 scoop update
 
 scoop install main/aria2
