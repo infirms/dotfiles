@@ -1,16 +1,10 @@
 {
-    "logLevel": "Error",
-    "proxies": [
-        {
-            "appNames": [
-                "Discord.exe",
-                "C:\\Users\\template\\AppData\\Local\\Discord\\Update.exe"
-            ],
-            "socks5ProxyEndpoint": "localhost:2080",
-            "supportedProtocols": [
-                "TCP",
-                "UDP"
-            ]
-        }
-    ]
+  "logLevel": "Error",
+  "proxies": [
+    {
+      "appNames": ["codex", "omp"],
+      "socks5ProxyEndpoint": "127.0.0.1:2080",
+      "supportedProtocols": ["TCP", "UDP"]
+    }
+  ]
 }
